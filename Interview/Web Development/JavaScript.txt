@@ -1,3 +1,4 @@
+Huhahah 
 In JavaScript we have Number, String, Boolean , Object            all start with CAPITAL
  
 we use let, Const    ( var   was used before 2015 but it is still used in old websites )
