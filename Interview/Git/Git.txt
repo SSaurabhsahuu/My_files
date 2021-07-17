@@ -14,10 +14,11 @@ To do it the Developer runs below commands in his terminal / Command prompt
 
 1) Make a folder(repository) in your pc where you want project
 2) in cmd go to this location 
-3) git init           (this initializes a hidden .git folder )
+3) git init           (this initializes a hidden .git folder ) 	 not mandatory
 4) git clone https://github.com/SSaurabhsahuu/djangoEcom.git     or paste your local project in local repo before git init
-5) git add Sorting_Algorithms_Visualizer            
-6) git commit -m  "Commit project folder"              "Commit project folder" it tells why this commit was done
+5) git add file_name			makes changes staged      	    	  	
+6) git commit -m  "first Commit"	commit saves changes in local repository   "first Commit" it tells why this commit was done
+7) git push				makes changes in Remote repository in github
 
 ( love babbar      https://www.youtube.com/watch?v=uj4fy4kpaOA&t=5s             
 	   	https://support.atlassian.com/bitbucket-cloud/docs/branch-a-repository/    
@@ -25,3 +26,7 @@ To do it the Developer runs below commands in his terminal / Command prompt
 
 
  Need of branching   :       https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+
+Exit vim editor in git  
+	press Esc
+	:wq		( save and quit )
