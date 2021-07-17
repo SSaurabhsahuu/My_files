@@ -1,0 +1,87 @@
+1. What is Database?
+Ans. Database is place where data is stored in an organised way .
+
+2. What is DBMS?
+Ans. DBMS is software that is used to create , retrieve ,update and manage the database . 
+    It ensures that our data is consistent , organised and easily accessible .
+    It is an interface between Database and end User . 
+
+DDL (Data definition language) SQL commands that creates or modifies the structure of database 
+					Create, Alter, Drop, truncate
+DML (Data Manipulation lang)   SQl commands that manipulates data in database
+					Select, Insert, Update, Delete, Merge
+DCL (Data Control Lang)	       SQL commands that Control permission on database
+			        	Grant, Revoke
+TCL (Transfer Control Lang)    SQL commands that deal with Transactions in database
+			        	Commit, Rollback
+
+DML
+	select * from Table_name ; 
+	
+	insert into Table_name(column_1, col_2, col_3)
+	values (5,'abc', 'xyz');
+	
+	delete from Table_name
+	where id=5;
+
+	update Table_name
+	set col_1=3, col_2='qwerty'
+	where id=5;
+
+3. What are constraints?
+  rules concerning data .
+ NOT NULL  , UNIQUE , PRimary  ,Foreign  , default
+
+NOT NULL - restricts null values to insert in column
+
+UNIQUE key - all values in the column should be unique
+  	     it allows 1 NULL value
+	     a table can have many Unique fields.
+https://www.sqlshack.com/commonly-used-sql-server-constraints-not-null-unique-primary-key/
+
+PRIMARY KEY is a field or group of Fields that uniquely identifies each row in a Table.
+   it should contain Unique and NOT NULL values
+   a table can have one and only one primary key.
+   it follows entity integrity 
+
+Foreign key is a field in child table that refers to primary key of Parent table.
+	There can be Multiple Foreign keys in a table ,each refering to multiple parent table .
+	FOREIGN KEY allows inserting NULL values if there is no NOT NULL constraint defined on this key,
+	but the PRIMARY KEY does not accept NULLs.(it happens in case of Multiple foreign key) 
+	It follows Referential integrity . 
+	https://www.sqlshack.com/commonly-used-sql-server-constraints-foreign-key-check-default/
+	On update Cascade : make changes in child table when parent table is updated
+
+https://www.youtube.com/watch?v=ztHopE5Wnpc&t=10s
+one to one  : if 1 teacher can teach only 1 course and 1 course is teached by 1 teacher         2 tables 
+one to many : a customer can have many orders and 1 order can be place by 1 Customer 		2 tables
+ 
+Many-to-many :   M:N ( 1:M + N:1 )  3 tables ( 2 tables + 1 Intermediate table )
+		 A customer can buy many products and a product can be buyed by many customers      
+	         A student can take many courses and a course can be taken by many students
+	       	 https://fmhelp.filemaker.com/help/18/fmp/en/index.html#page/FMP_Help/many-to-many-relationships.html
+
+Design Database             
+	Blog (Post, Comment, Reply )  https://codewithawa.com/posts/creating-a-comment-and-reply-system-php-and-mysql 
+	Course (Teachers, Courses, Company, their Employees)       https://towardsdatascience.com/designing-a-relational-database-and-creating-an-entity-relationship-diagram-89c1c19320b2
+	E-Commerce ( User, Producs, Orders (intermediary table)) https://database.guide/the-3-types-of-relationships-in-database-design/
+Inner join : It returns all the matching rows from both table
+Left join : It returns matched rows from both table and all rows from left table
+	    eg   select Cutomers.name , Orders.id
+		 from Customers
+		 left join Orders   ON  Customers.Customerid = Orders.Customerid
+	    This will show all Customers who have made NULL or more orders 
+Right Join : It returns  matched rows from both table and all rows from right table
+Full join : It returns all rows from both tables  
+self Join : it is a join where table is joined to itself  based on certain columns.  (syntax is diff)
+	  eg a table of id, employee_name, manager_id self join to show employee and its manager name
+    
+Entity is a real world object that has some properties associated with it.
+
+Transaction : is a program unit whose execution may or may not change the contents in a database .
+A transaction should have ACID properties
+ Atomicity - Either  transaction completes succesfuly or doesnt happens at all
+ Consistency - the data should be correct before and after transaction
+ Isolation - no other process can change data while trnsaction is running
+ Durable   - the data should stored safely after the transaction even after system failure 
+https://www.geeksforgeeks.org/acid-properties-in-dbms/
