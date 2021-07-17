@@ -7,17 +7,16 @@
 using std::vector;
 using std::swap;
 
-
-
 void quick_sort(vector<int> &a, int l, int r,int *c)
 {
   if (l >= r) return;
 
   int x = a[l];
   int i=l+1,j = r;
-  while(i<=j) {
-    if(a[i]>x&&a[j]<x)  // if( a[i]>a[j] )  wrong
-    {  std::cout<<a[i]<<" and "<<a[j]<<"\n";
+  while(i<=j)
+ {
+    if(a[i]>x&&a[j]<x)  // only if( a[i]>a[j] ) is wrong
+    { std::cout<<"swap "<<a[i]<<" and "<<a[j]<<"\n";
         swap(a[i],a[j]);
 
         *c=*c+1;
@@ -31,7 +30,8 @@ void quick_sort(vector<int> &a, int l, int r,int *c)
 
   }
   if(a[l]!=a[j])
-  { swap(a[l], a[j]);
+  { std::cout<<"swap "<<a[l]<<" and "<<a[j]<<"\n";
+      swap(a[l], a[j]);
     *c=*c+1;
   }
   quick_sort(a, l, j-1,c);
