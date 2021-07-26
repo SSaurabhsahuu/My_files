@@ -1,0 +1,43 @@
+Error, Bug, Failure
+Error		When software is behaving in unexpected way in Developement phase
+Bug		When software is behaving in unexpected way in Testing phase
+Failure		When software is behaving in unexpected way after Deployement  when customer is using it
+
+SDLC	Software Development Life Cycle
+ Requirement analysis
+ Design phase
+ Development
+ Testing
+ Maintenance
+
+Waterfall Model
+Spiral Model
+V-Model
+
+Static Testing		Review, walkthrough, Inspection of documents
+Dynamic Testing		Actual Testing	(White Box, Black Box)
+
+Agile Model
+	Agile follows Iterative (many SDLC)  &  Incremental (features get added in each cycle)  process
+	Develop a software with some features so that customer do not has to wait
+	Good Communication between Designers, Developers, Testers, Customer
+Scrum
+	It is a framework used to build software product by following Agile Principles
+	A scrum team has
+	1) Product Owner	defines & prioritize the features & communicate with customer
+	2) Scrum Master		Facilitates & drives the Agile Process in SDLC and team Members
+	3) Dev Team		
+	4) QA team
+	
+
+Testing Techniques / Test Case Design Techniques	( https://www.youtube.com/watch?v=Wsw0pywdR5k&list=PLUDwpEzHYYLseflPNg0bUKfLmAbO2JnE9&index=6 
+	It is used to	
+			1)	Reduce no. of Test Cases
+			2)	Increase Coverage
+Types
+1) Equilance Class Partition		Divide the data in multiple classes
+2) Boundary Value Analysis		min, min-1,min+1	max, max-1, max+1
+3) Decision Table Based Testing		when we have diff actions to perform based on many conditions & 
+					combination of conditions eg.    https://www.youtube.com/watch?v=Wsw0pywdR5k&list=PLUDwpEzHYYLseflPNg0bUKfLmAbO2JnE9&index=6
+4) State Transition			eg.  3 chances to input right username and password
+5) Error Guessing			Experienced testers can guess the bugs

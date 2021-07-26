@@ -34,7 +34,7 @@ eg. Capitalize a character
  ===    Strict equality   18 === 18   True      we always use this
  ==     loose            '18'== 18    True      it has type cohesion  
  
-False     if(0)  if('')  if(undefined)  if(NaN)  if(null)
+False     if(0)  if('')  if(undefined)  if(NaN)  if(null)		!0 , !'' = true	
 
 Template Literal    we use this  sign  `  `
  	let name = "	Sks";
